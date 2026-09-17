@@ -1,13 +1,12 @@
 class Solution {
     public int minimumFlips(int n) {
         String bin = intToBinary(n);
-        
-        String rev = reverse(bin);
-
-        if(bin.equals(rev)) return 0;
+    
+        // if(bin.equals(reverse(bin))) return 0;
         int ans = 0;
-        for(int i = 0; i < bin.length(); i++){
-            if(bin.charAt(i) != rev.charAt(i)) ans++;
+        int len = bin.length();
+        for(int i = 0; i < len/2; i++){
+            if(bin.charAt(i) != bin.charAt(len - i - 1)) ans += 2;
         }
 
         return ans;
@@ -17,7 +16,7 @@ class Solution {
         return Integer.toBinaryString(n);
     }
 
-    private String reverse(String s){
-        return new StringBuilder(s).reverse().toString();
-    }
+    // private String reverse(String s){
+    //     return new StringBuilder(s).reverse().toString();
+    // }
 }
