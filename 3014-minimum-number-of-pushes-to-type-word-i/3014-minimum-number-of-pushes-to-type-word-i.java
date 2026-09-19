@@ -1,7 +1,7 @@
 class Solution {
     public int minimumPushes(String word) {
-        // return bestWay(word);
-        return myWay(word);
+        return bestWay(word);
+        // return myWay(word);
     }
 
     private int bestWay(String word) {
