@@ -1,6 +1,7 @@
 class Solution {
     public int numberOfSpecialChars(String word) {
-        boolean[] b = new boolean[(123 - 65)];
+        boolean[] b = new boolean[58];
+        // System.out.print(123-65);
         for(char ch : word.toCharArray()){
             b[(ch - 'A')] = true;
         }
