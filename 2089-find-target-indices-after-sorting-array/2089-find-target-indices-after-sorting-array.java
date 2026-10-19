@@ -2,9 +2,12 @@ class Solution {
     public List<Integer> targetIndices(int[] nums, int target) {
         int n = nums.length;
         int less = 0, same = 0;
-        for(int i = 0; i < n; i++){
-            if(nums[i] < target) less++;
-            else if(nums[i] == target) same++;
+        for (int num : nums) {
+            if (num < target) {
+                less++;
+            } else if (num == target) {
+                same++;
+            }
         }
 
         List<Integer>result = new ArrayList<>();
